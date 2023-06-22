@@ -11,6 +11,9 @@
       ],
       "@assets/*": [
         "src/assets/*"
+      ],
+      "@ts/*": [
+        "src/ts/*"
       ]
     }
   }
