@@ -1,6 +1,7 @@
 ---
 import NavBar from "@components/NavBar.astro";
 import Projects from "@components/Projects.astro";
+import Socials from "@components/Socials.astro";
 import { Image } from "astro:assets";
 import { Debug } from "astro/components";
 import type Link from "@interfaces/Link";
@@ -9,6 +10,7 @@ import blackCatWalking from "../assets/black_cat_walking_and_sleeping_like_my_ch
 const points: Link[] = [
 	{ displayName: "Home", location: "#" },
 	{ displayName: "Projects", location: "#projects-sec" },
+	{ displayName: "Socials", location: "#socials-sec" },
 ];
 ---
 
@@ -18,6 +20,9 @@ const points: Link[] = [
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script
+			src="https://kit.fontawesome.com/91e746a27a.js"
+			crossorigin="anonymous"></script>
 		<title>Burak Taner</title>
 		<script
 			src="https://kit.fontawesome.com/91e746a27a.js"
@@ -33,6 +38,7 @@ const points: Link[] = [
 			<a
 				href="https://tenor.com/view/cat-cute-animation-cartoon-hi-gif-16995078"
 				target="_blank"
+				class="cat-link"
 				><Image
 					src="https://media.tenor.com/aFrLlewBz4IAAAAi/cat-cute.gif"
 					alt="An orange cat is waving at you"
@@ -67,13 +73,16 @@ const points: Link[] = [
 				<br />
 				<p>
 					That's me. If you want to get to know about me more, <a
-						href="#Contact"
+						href="#socials-sec"
 						class="contact-me">contact</a
 					> with me!
 				</p>
 			</section>
 			<section id="projects-sec" class="projects-sec">
-				<a href="https://www.artstation.com/artwork/X1vP1l" target="_blank"
+				<a
+					href="https://www.artstation.com/artwork/X1vP1l"
+					target="_blank"
+					class="cat-link"
 					><Image
 						src={blackCatWalking}
 						alt="Black cat walking and after that sleeping"
@@ -84,6 +93,22 @@ const points: Link[] = [
 				>
 				<h2>Projects</h2>
 				<Projects />
+			</section>
+			<section id="socials-sec" class="socials-sec">
+				<a
+					href="https://displate.com/displate/6246939?pe=animals,cartoons,funny&ctrc=US"
+					target="_blank"
+					class="cat-link"
+				>
+					<Image
+						src="https://static.displate.com/280x392/displate/2023-02-16/6886ecb9c9db33a18ba733ce1a70ea1d_4311f16896243395f85313493949aec6.jpg"
+						alt="a gray cat looking like a character from pathetic meme"
+						width={150}
+						height={150}
+						class="cat-gif"
+					/>
+				</a>
+				<Socials />
 			</section>
 		</main>
 	</body>
