@@ -1,0 +1,60 @@
+---
+import smileyImg from "@assets/smileymeow-project-image.png";
+import hubtofyImg from "@assets/hubtofy-project-portfolio.png";
+import eventTurkeyImg from "@assets/eventmvc-project-portfolio.png";
+import afetHayvanImg from "@assets/afethayvan-project-portfolio.png";
+import type Project from "@interfaces/Project";
+import { Image } from "astro:assets";
+const projects: Project[] = [
+  {
+    title: "Smiley Meow",
+    href: "https://github.com/BurakTaner/SmileyMeow",
+    description: "Website for Smiley Meow vet clinic.",
+    imgAlt: "Login page of a vet clinic's website",
+    image: smileyImg,
+  },
+  {
+    title: "Afet Hayvan",
+    href: "https://github.com/Uzay-Sakinleri/afet-hayvan",
+    description: "Communicate with earthquake animals via persons for help",
+    imgAlt: "Black website with a map at the bottom",
+    image: afetHayvanImg,
+  },
+  {
+    title: "Events Turkey",
+    href: "https://github.com/BurakTaner/InfotechMVCEtkinlik",
+    description: "Looks for events in Turkey, any event!",
+    imgAlt:
+      "Bunch of event image with their location at the right and filter at the left side",
+    image: eventTurkeyImg,
+  },
+  {
+    title: "Hubtofy",
+    href: "https://github.com/BurakTaner/Hubtofy",
+    description: "Anyone can search their favorite band or sign into system",
+    imgAlt:
+      "Pinky blush background with welcome message to user and navigation at the top",
+    image: hubtofyImg,
+  },
+];
+---
+
+<ol id="projects-list" class="projects-list">
+  {
+    projects.map((proj) => {
+      return (
+        <li>
+          <a href={proj.href} target="_blank">
+            <Image
+              src={proj.image}
+              alt={proj.imgAlt}
+              width={320}
+              height={150}
+            />
+          </a>
+          <span>{proj.description}</span>
+        </li>
+      );
+    })
+  }
+</ol>

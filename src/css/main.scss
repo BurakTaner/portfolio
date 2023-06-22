@@ -17,7 +17,17 @@ body {
     font-family:monospace;
     animation: 2s ease-in-out 1 nothingtofull; 
 }
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
+.cat-gif {
+    display: block;
+    margin: auto;
+}
+
+// Nav
 header {
     width:100%;
 }
@@ -62,14 +72,26 @@ nav {
         }
     }
 }
+//
 
-.contact-me {
-    color: gray;
+//Projects
+
+.projects-sec{
+    margin: 30px 30px auto 80px;
+
+    ol {
+        list-style: none;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+
+        span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    }
 }
-
- .who-am-i-sec {
-     margin: auto 15px;
- }
 
 
 @keyframes nothingtofull {

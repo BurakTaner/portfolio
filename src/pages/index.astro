@@ -1,11 +1,14 @@
 ---
 import NavBar from "@components/NavBar.astro";
+import Projects from "@components/Projects.astro";
+import { Image } from "astro:assets";
 import { Debug } from "astro/components";
-import "../css/main.scss";
 import type Link from "@interfaces/Link";
+import "../css/main.scss";
+import blackCatWalking from "../assets/black_cat_walking_and_sleeping_like_my_child.gif";
 const points: Link[] = [
-	{ displayName: "Beginning", location: "#" },
-	{ displayName: "Deneme", location: "#Link1" },
+	{ displayName: "Home", location: "#" },
+	{ displayName: "Projects", location: "#projects-sec" },
 ];
 ---
 
@@ -27,6 +30,17 @@ const points: Link[] = [
 		</header>
 		<main>
 			<h1>Who am I?</h1>
+			<a
+				href="https://tenor.com/view/cat-cute-animation-cartoon-hi-gif-16995078"
+				target="_blank"
+				><Image
+					src="https://media.tenor.com/aFrLlewBz4IAAAAi/cat-cute.gif"
+					alt="An orange cat is waving at you"
+					width={100}
+					height={100}
+					class="cat-gif"
+				/>
+			</a>
 			<section id="who-am-i-sec" class="who-am-i-sec">
 				<p>
 					Oi, my name is Burak. I am a junior developer who currently work with
@@ -59,9 +73,17 @@ const points: Link[] = [
 				</p>
 			</section>
 			<section id="projects-sec" class="projects-sec">
-				<ol id="projects-list" class="projects-list">
-					<li class="project"></li>
-				</ol>
+				<a href="https://www.artstation.com/artwork/X1vP1l" target="_blank"
+					><Image
+						src={blackCatWalking}
+						alt="Black cat walking and after that sleeping"
+						width={150}
+						height={150}
+						class="cat-gif"
+					/></a
+				>
+				<h2>Projects</h2>
+				<Projects />
 			</section>
 		</main>
 	</body>
