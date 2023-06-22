@@ -1,0 +1,21 @@
+---
+import type Link from "@interfaces/Link";
+interface Props {
+  points: Link[];
+}
+const { points } = Astro.props;
+---
+
+<nav id="navbar">
+  <ul id="nav-list" class="nav-list">
+    {
+      points.map((e, i) => {
+        return (
+          <li class={`nav-link ${i === 0 ? "active" : ""}`}>
+            <a href={e.location}>{e.displayName}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

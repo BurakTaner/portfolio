@@ -1,0 +1,84 @@
+$background-clr: #B5B5B5;
+$link-color: white;
+$hover-color: #3A267D;
+$head-color: #D58136;
+$nav-bg: black;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $background-clr;
+    font-size:22.5px;
+    font-family:monospace;
+    animation: 2s ease-in-out 1 nothingtofull; 
+}
+
+header {
+    width:100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 60px;
+    color: $head-color;
+    margin-bottom:25px;
+}
+
+nav {
+    position:fixed;
+    width: 100%;
+    background: $nav-bg;
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:15%;
+        list-style: none;
+        
+        .nav-link {
+            padding: 5px;
+            white-space: nowrap;
+        }
+
+        a {
+            text-decoration: none;
+            color: $link-color;
+            
+            &:hover {
+                text-shadow: $hover-color 0 0;
+                text-decoration: underline;
+                opacity:0.7;
+            }
+        }
+
+        .active {
+            background: rgba(222,222,222, 0.4);
+        }
+    }
+}
+
+.contact-me {
+    color: gray;
+}
+
+ .who-am-i-sec {
+     margin: auto 15px;
+ }
+
+
+@keyframes nothingtofull {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opactiy: 1;
+    }
+}
+

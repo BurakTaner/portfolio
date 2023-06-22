@@ -1,0 +1,68 @@
+---
+import NavBar from "@components/NavBar.astro";
+import { Debug } from "astro/components";
+import "../css/main.scss";
+import type Link from "@interfaces/Link";
+const points: Link[] = [
+	{ displayName: "Beginning", location: "#" },
+	{ displayName: "Deneme", location: "#Link1" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Burak Taner</title>
+		<script
+			src="https://kit.fontawesome.com/91e746a27a.js"
+			crossorigin="anonymous"></script>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body>
+		<header id="body-header">
+			<NavBar points={points} />
+		</header>
+		<main>
+			<h1>Who am I?</h1>
+			<section id="who-am-i-sec" class="who-am-i-sec">
+				<p>
+					Oi, my name is Burak. I am a junior developer who currently work with
+					C# and JavaScript/Typescript for development. I am mostly focused on
+					web right now but ı have ideas about systems, ai and other part of the
+					software development. In web, ı am a backend developer but as a modern
+					web developer, ı learned about frontend.
+				</p>
+				<br />
+				<p>
+					I went to a software expertise course; finished some online courses
+					but ı am still learning myself through other developers and sourceses
+					on internet. I love open source, ı think if there is not private
+					information the code; every codebase should be a open source project.
+					Community makes everything better, we are building our cities
+					together, why not our applications?
+				</p>
+				<br />
+				<p>
+					I also love animals so much, they are very important for me and equals
+					important to me as like a human. I hope ı can help as much as ı can to
+					make world better for them.
+				</p>
+				<br />
+				<p>
+					That's me. If you want to get to know about me more, <a
+						href="#Contact"
+						class="contact-me">contact</a
+					> with me!
+				</p>
+			</section>
+			<section id="projects-sec" class="projects-sec">
+				<ol id="projects-list" class="projects-list">
+					<li class="project"></li>
+				</ol>
+			</section>
+		</main>
+	</body>
+</html>
