@@ -28,6 +28,10 @@ h2 {
     margin-bottom: 50px;
 }
 
+#hamburger-bars {
+    display: none;
+}
+
 .cat-gif {
     display: block;
     width: 100%;
@@ -64,6 +68,10 @@ nav {
         .nav-link {
             padding: 5px;
             white-space: nowrap;
+
+            &:hover {
+                background: gray;
+            }
         }
 
         a {
@@ -170,7 +178,7 @@ $social-colors: (1: "#1D9BF0", 2: "#E98864", 3: "black");
     nav {
         .nav-list {
             flex-direction: column;
-            gap:30px;
+            gap:15px;
             text-align: center;
         }
     }
@@ -186,6 +194,18 @@ $social-colors: (1: "#1D9BF0", 2: "#E98864", 3: "black");
     .socials-sec {
         ol {
         justify-content: space-between;
+        }
+    }
+    
+    #hamburger-bars {
+        display: block;
+        position: fixed;
+        left: 90vw;
+        bottom: 95.5vh;
+        color: whitesmoke;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
