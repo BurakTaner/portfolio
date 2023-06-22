@@ -1,0 +1,35 @@
+---
+import type Social from "@interfaces/Social";
+const socials: Social[] = [
+  {
+    text: "Twitter",
+    icon: "fa-brands fa-twitter",
+    href: "https://twitter.com/MrPandaWizard6",
+  },
+  {
+    text: "E-mail",
+    icon: "fa-solid fa-envelope",
+    href: "ertantaner2000@gmail.com",
+  },
+  {
+    text: "Github",
+    icon: "fa-brands fa-github",
+    href: "www.github.com/BurakTaner",
+  },
+];
+---
+
+<ol>
+  {
+    socials.map((social, i) => {
+      return (
+        <li>
+          <h3 class="social-title">{social.text}</h3>
+          <a href={social.href} target="_blank">
+            <i class={social.icon} id={`social-icon-${i + 1}`} />
+          </a>
+        </li>
+      );
+    })
+  }
+</ol>

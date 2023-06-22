@@ -25,7 +25,9 @@ h2 {
 .cat-gif {
     display: block;
     margin: auto;
+    height: auto;
 }
+
 
 // Nav
 header {
@@ -74,6 +76,11 @@ nav {
 }
 //
 
+// Who i am sec
+.who-am-i-sec {
+    text-align: center;
+}
+
 //Projects
 
 .projects-sec{
@@ -93,6 +100,39 @@ nav {
     }
 }
 
+// Socials
+$social-colors: (1: "#1D9BF0", 2: "#E98864", 3: "black");
+.socials-sec {
+    margin: 50px 30px auto 80px;
+    
+    .cat-gif {
+        margin-bottom:50px;
+    }
+
+    ol {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content:space-around;
+
+        @each $num, $color in $social-colors {
+            & li i#social-icon-#{$num}{
+                color: #{$color};
+            }
+        }
+
+        .social-title {
+            display:inline-block;
+            font-size: 15px;
+        }
+
+        li {
+            display:flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+        }
+    }
+}
 
 @keyframes nothingtofull {
     0% {
