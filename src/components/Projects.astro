@@ -3,6 +3,8 @@ import smileyImg from "@assets/smileymeow-project-image.png";
 import hubtofyImg from "@assets/hubtofy-project-portfolio.png";
 import eventTurkeyImg from "@assets/eventmvc-project-portfolio.png";
 import afetHayvanImg from "@assets/afethayvan-project-portfolio.png";
+import dictionareactImg from "@assets/dictionareact-project-portolifo.png";
+import kitapcekilisiImg from "@assets/kitapcekilisi-project-portolifo.png";
 import type Project from "@interfaces/Project";
 import { Image } from "astro:assets";
 const projects: Project[] = [
@@ -35,6 +37,23 @@ const projects: Project[] = [
     imgAlt:
       "Pinky blush background with welcome message to user and navigation at the top",
     image: hubtofyImg,
+  },
+  {
+    title: "Dictionareact",
+    href: "https://github.com/BurakTaner/dictionareact",
+    description: "Dictionary with search functionallity",
+    imgAlt:
+      "A website screen with a search bar and create button at the right of the screen.",
+    image: dictionareactImg,
+  },
+  {
+    title: "Kitapcekilisi",
+    href: "https://github.com/Uzay-Sakinleri/kitap-cekilis",
+    description:
+      "A giveaway site dedicate to UzayZuhal's monthly book giveaways",
+    imgAlt:
+      "A text box, white background red colored buttons and inputs and a button with ROLL text in front of a autumn colored background",
+    image: kitapcekilisiImg,
   },
 ];
 ---
